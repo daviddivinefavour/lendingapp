@@ -1,16 +1,36 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+/* eslint-disable semi */
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity()
+// eslint-disable-next-line import/prefer-default-export
 export class User {
   @PrimaryGeneratedColumn()
     id: number;
 
   @Column()
-    firstName: string;
+    fullname: string;
 
   @Column()
-    lastName: string;
+    email: string;
 
   @Column()
-    age: number;
+    phoneNumber: number;
+
+  @Column()
+    password: string;
+
+  @Column()
+    verifiedAt: string;
+
+  @CreateDateColumn()
+    createdDate: Date;
+
+  @UpdateDateColumn()
+    updatedDate: Date;
 }

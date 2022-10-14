@@ -28,7 +28,7 @@
   "scripts": {
     "start": "ts-node build/server",
     "typeorm": "typeorm-ts-node-commonjs",
-    "dev": "ts-node-dev --respawn --transpile-only build/server",
+    "dev": "ts-node-dev --respawn --transpile-only src/server",
     "build": "npx tsc"
   },
   "name": "lendingapp",

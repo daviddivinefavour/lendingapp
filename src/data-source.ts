@@ -5,10 +5,10 @@ import { User } from './entity/User';
 const AppDataSource = new DataSource({
   type: 'postgres',
   host: 'localhost',
-  port: 5432,
-  username: 'divinefavour',
+  port: 5438,
+  username: 'root',
   password: 'password',
-  database: 'test',
+  database: 'lending-app-dev',
   entities: [User],
 });
 

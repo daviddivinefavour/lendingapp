@@ -10,14 +10,14 @@ export const validateNewUser = async (req: Request, res: Response, next) => {
     const handled = await handlerValidationError(validate);
     return failure(handled.status)(handled.message)(res)(handled.data);
   }
-  next();
+  return next();
 };
 
-export const validateLogin = async (req: Request, res: Response) => {
+export const validateLogin = async (req: Request, res: Response, next) => {
   const validate = await loginSchema.safeParse(req.body);
   if (!validate.success) {
     const handled = await handlerValidationError(validate);
     return failure(handled.status)(handled.message)(res)(handled.data);
   }
-  next();
+  return next();
 };
